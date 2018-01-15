@@ -1,0 +1,11 @@
+extends layout
+
+block title
+    title All users
+
+block content
+    div
+        ul
+            each user in users
+                li= user.username
+

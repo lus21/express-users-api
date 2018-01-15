@@ -1,0 +1,30 @@
+extends layout
+
+block title
+    title Add new user
+
+block content
+    div
+        form(method="post", action="/form")
+            if errors
+                div
+                    for error in errors
+                        p(style="color: red;")= error.msg
+            div
+                label(for="username") Username
+                input(type="text" name="username" id="username")
+            div
+                label(for="password") Password
+                input(type="password" name="password" id="password")
+            div
+                label(for="male") Male
+                input(type="radio" name="gender" value="male" id="male")
+                label(for="female") Female
+                input(type="radio" name="gender" value="female" id="female")
+            div
+                label(for="agree") Agree with
+                input(type="checkbox" name="agree" id="agree")
+            div
+                button Add
+
+
